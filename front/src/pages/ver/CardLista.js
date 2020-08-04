@@ -15,7 +15,6 @@ export default class CardLista extends Component {
     let calcIva = this.props.product.costo * 0.16;
     let elIva = this.state.iva;
       elIva += calcIva;
-      console.log(elIva + 'por favor!!!"')
     return elIva
   }
   handleIVA = () => {
@@ -36,13 +35,3 @@ export default class CardLista extends Component {
     )
   }
 }
-/*
-
-function precioProd(costo) {
-  let iva = 0;
-  let precio =0
-  iva = costo * 0.16;
-  console.log(iva)
-  return precio = iva + costo; 
-}
- */

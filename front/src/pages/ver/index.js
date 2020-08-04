@@ -25,7 +25,6 @@ export default class AllProducts extends Component {
 
 
   render() {
-    console.log('si se tiene que ver')
     return(
       <>
         <h1>Listas</h1>

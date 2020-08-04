@@ -12,16 +12,6 @@ class AddProduct extends Component {
         costo: ""
     
   }
-
- /* inputChange = ({ target: {value, name} }) =>{
-    this.setState({
-      ...this.state,
-      form:{
-        ...this.state.form,
-        [name]:value
-      }
-    });
-  };*/
   inputChange = ({ target: { value, name } }) => {
     this.setState({
       ...this.state,
@@ -32,14 +22,10 @@ class AddProduct extends Component {
   agregarProducto = async e => {
     e.preventDefault();
     const { nombre, costo } = this.state;
-    //const formData = new FormData();
-
-   /*for(let key in this.state.form){
-      formData.append(key, this.state.form[key])
-    }*/
+    
     
     const product = await productService.createProducto({nombre, costo});
-    console.log(product + 'AAAAAAAAAAAAAAAAAAAAA')
+    
     this.setState({
       form: {
         nombre:"",
@@ -49,20 +35,7 @@ class AddProduct extends Component {
     alert('producto listo');
   }
 
-  /*agregarProducto = async e => {
-   e.preventDefault();
-   const { form } = this.state;
-   const { data } = await axios.post();
-   
-   alert('producto listo');
 
-    this.setState({
-      form: {
-        nombre:"",
-        costo:""
-      }
-    })
-  }*/
 
   render() {
     return(

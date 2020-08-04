@@ -9,10 +9,6 @@ export default  class ProductService {
         withCredentials: true
       });
     //lista de productos 
-    /*async getProductos() {
-        const p = await this.products.get('/api/ver')
-        return p
-    }*/
 
     getProductos() {
         return this.products.get('api/ver');
