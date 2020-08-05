@@ -1,6 +1,27 @@
-div {
-    background-color: yellowgreen;
+
+.card {
+    background-color:#6B918E;
+    width: 60%;
+    color: #FFF;
 }
 article {
-    background-color: thistle;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #2F514E;
+    width: 100%;
+
+}
+p {
+    width: 25%;
+    text-align: ce;
+}
+.renglon {
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    border: 1px solid #2F514E;
+    width: 60%
+}
+h3 {
+    width: 25%;
 }

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ProductService from '../../services/ProductService';
 import { FormAddProduct } from '../../styled-components/components';
+import './styles.css'
 
 
 const productService = new ProductService();
 
 class AddProduct extends Component {
   state = {
-    
         nombre:"",
         costo: ""
     
@@ -39,7 +39,9 @@ class AddProduct extends Component {
 
   render() {
     return(
-      <form onSubmit={this.agregarProducto}>
+      <div className='card-agregar'> 
+      <h1 style={{marginTop:"80px"}}>Agrega un producto</h1>
+      <FormAddProduct onSubmit={this.agregarProducto}>
         <input 
           name="nombre"
           type="text" 
@@ -48,7 +50,7 @@ class AddProduct extends Component {
           placeholder="nombre"
           required
         />
-        <label>Costo producto</label>
+        <label>Costo producto (número)</label>
         <input 
           name="costo"
           type="number"
@@ -59,7 +61,8 @@ class AddProduct extends Component {
           required
         />
         <button>Subir</button>
-      </form>
+      </FormAddProduct>
+      </div>
     )
   }
 
