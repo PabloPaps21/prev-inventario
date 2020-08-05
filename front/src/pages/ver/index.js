@@ -11,6 +11,7 @@ const productService = new ProductService();
 export default class AllProducts extends Component {
   state = {
     products: [],
+    total:0
   };
 
  
@@ -19,8 +20,18 @@ export default class AllProducts extends Component {
   async componentDidMount(){
     const { data } = await productService.getProductos();
     console.log(data)
+    
+    var tempTotal = 0;
+    
+    data.forEach(function (obj){
+      tempTotal += Number(obj.costo);
+    });
+    
+    /*console.log(tempTotal + ' ->' + 'AAAAAAAAAAAA')*/
+
     this.setState({ 
-      products:data
+      products:data ,
+      total: (tempTotal * 1.16).toFixed(2)
     })
   }
 

@@ -12,7 +12,7 @@ export default class CardLista extends Component {
     total:0
   }
   
-  
+
   render() {
     
 

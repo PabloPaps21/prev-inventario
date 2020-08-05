@@ -9,8 +9,7 @@ const productService = new ProductService();
 class AddProduct extends Component {
   state = {
         nombre:"",
-        costo: ""
-    
+        costo: "",
   }
   inputChange = ({ target: { value, name } }) => {
     this.setState({
@@ -18,6 +17,7 @@ class AddProduct extends Component {
       [name]: value
     });
   };
+
 
   agregarProducto = async e => {
     e.preventDefault();
@@ -29,7 +29,7 @@ class AddProduct extends Component {
     this.setState({
       form: {
         nombre:"",
-        costo:""
+        costo:"",
       }
     });
     alert('producto listo');
